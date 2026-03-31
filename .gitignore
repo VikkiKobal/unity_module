@@ -2,10 +2,6 @@
 #
 # Get latest from https://github.com/github/gitignore/blob/main/Unity.gitignore
 #
-.DS_Store
-.cursor/
-unity-mcp-advanced/
-.utmp/
 /[Ll]ibrary/
 /[Tt]emp/
 /[Oo]bj/
