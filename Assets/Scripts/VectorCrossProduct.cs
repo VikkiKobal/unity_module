@@ -1,9 +1,5 @@
 using UnityEngine;
 
-/// <summary>
-/// Клас для роботи з тривимірними векторами.
-/// Обчислює векторний добуток двох векторів.
-/// </summary>
 public class Vector3D
 {
     public float X, Y, Z;
@@ -13,12 +9,6 @@ public class Vector3D
         X = x; Y = y; Z = z;
     }
 
-    /// <summary>
-    /// Векторний добуток (cross product): a × b
-    /// | i   j   k  |
-    /// | a.x a.y a.z |
-    /// | b.x b.y b.z |
-    /// </summary>
     public Vector3D CrossProduct(Vector3D b)
     {
         return new Vector3D(
@@ -32,9 +22,6 @@ public class Vector3D
         => $"({X}, {Y}, {Z})";
 }
 
-/// <summary>
-/// MonoBehaviour — запускає обчислення та виводить результат на екран.
-/// </summary>
 public class VectorCrossProduct : MonoBehaviour
 {
     private string resultText = "";
