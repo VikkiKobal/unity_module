@@ -17,19 +17,7 @@ void Update()
             Debug.Log("BOOST: " + pc.boostTimer.ToString("F1") + "s");
     }
 
-public void OnFinish()
-    {
-        Debug.Log("[GameManager] Гравець досяг фінішу!");
-        GameStore.Instance?.OnLevelComplete();
-        Time.timeScale = 0f;
-        Debug.Log("\u2605\u2605\u2605 ПЕРЕМОГА! \u2605\u2605\u2605");
-    }
+public void OnFinish() { GameStore.Instance?.OnLevelComplete(); if (LevelCompleteUI.Instance != null) LevelCompleteUI.Instance.ShowVictory(); else Time.timeScale = 0f; }
 
-public void OnRespawn()
-    {
-        if (GameStore.Instance != null)
-            Debug.Log($"[GameManager] Респаун. Життів: {GameStore.Instance.Lives} | Монет: {GameStore.Instance.CoinsCollected}");
-        else
-            Debug.Log("[GameManager] Респаун.");
-    }
+public void OnRespawn() { }
 }
